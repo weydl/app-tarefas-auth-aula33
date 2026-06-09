@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Lista de Tarefas com Login — Prática Aula 33",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/app.ts"
+    "dev": "ts-node-dev --respawn --files src/app.ts"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",

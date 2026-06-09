@@ -4,7 +4,7 @@ import * as UserModel from "../models/userModel";
 export const authRoutes = Router();
 
 // GET /login
-authRoutes.get("/login", (req: Request, res: Response) => {
+authRoutes.get("/", (req: Request, res: Response) => {
   const flash = req.session.flash;
   req.session.flash = null;
 
