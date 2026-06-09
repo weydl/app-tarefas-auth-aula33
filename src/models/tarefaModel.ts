@@ -52,3 +52,7 @@ export async function remover(id: number, userId: number): Promise<boolean> {
   await salvar(todas);
   return true;
 }
+
+export function toggleConcluida(userId: number, id: number) {
+  throw new Error("Function not implemented.");
+}

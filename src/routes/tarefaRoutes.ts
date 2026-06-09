@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
 import * as TarefaModel from "../models/tarefaModel";
+import { authRoutes } from "./authRoutes";
 
 export const tarefaRoutes = Router();
 
