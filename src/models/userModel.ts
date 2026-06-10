@@ -1,11 +1,13 @@
 import { readFile, writeFile } from "fs/promises";
 import bcrypt from "bcrypt";
+import { Role } from "../types/Role";
 
 export interface User {
   id: number;
   nome: string;
   email: string;
   senha: string;
+  role: Role;
 }
 
 const ARQUIVO = "dados/usuarios.json";
@@ -46,6 +48,7 @@ export async function registrar(
   const users = await carregar();
 
   const existente = users.find((u) => u.email === email);
+
   if (existente) {
     throw new Error("E-mail já cadastrado");
   }
@@ -60,9 +63,14 @@ export async function registrar(
     nome,
     email,
     senha: senhaHash,
+    role:
+      users.length === 0
+        ? Role.ADMIN
+        : Role.USER,
   };
 
   users.push(novoUser);
+
   await salvar(users);
 
   return novoUser;
@@ -84,4 +92,8 @@ export async function login(
   );
 
   return senhaValida ? user : null;
+}
+
+export async function listarUsuarios(): Promise<User[]> {
+  return carregar();
 }
