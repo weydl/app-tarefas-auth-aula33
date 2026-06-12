@@ -1,0 +1,14 @@
+<h1>Todas as Tarefas</h1>
+
+<ul>
+  <% tarefas.forEach(tarefa => { %>
+    <li>
+      Usuário: <%= tarefa.userId %> |
+      Tarefa: <%= tarefa.texto %> |
+      Status:
+      <%= tarefa.concluida ? "Concluída" : "Pendente" %>
+    </li>
+  <% }) %>
+</ul>
+
+<a href="/admin">Voltar ao Painel</a>
