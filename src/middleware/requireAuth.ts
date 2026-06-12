@@ -6,6 +6,7 @@ export function requireAuth(
   next: NextFunction
 ) {
   if (!req.session.userId) {
+    req.session.flash = "Faça login para continuar";
     return res.redirect("/login");
   }
 

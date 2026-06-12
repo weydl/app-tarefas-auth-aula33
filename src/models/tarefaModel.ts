@@ -53,9 +53,27 @@ export async function remover(id: number, userId: number): Promise<boolean> {
   return true;
 }
 
-export function toggleConcluida(userId: number, id: number) {
-  throw new Error("Function not implemented.");
+export async function toggleConcluida(
+  userId: number,
+  id: number
+): Promise<boolean> {
+  const todas = await carregar();
+
+  const tarefa = todas.find(
+    (t) => t.id === id && t.userId === userId
+  );
+
+  if (!tarefa) {
+    return false;
+  }
+
+  tarefa.concluida = !tarefa.concluida;
+
+  await salvar(todas);
+
+  return true;
 }
+
 export async function listarTodas(): Promise<Tarefa[]> {
   return carregar();
 } 

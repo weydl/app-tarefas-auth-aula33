@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": 1,
+    "userId": 1781281386924,
+    "texto": "tarefa da escola",
+    "concluida": false,
+    "criadaEm": "12/06/2026"
+  },
+  {
+    "id": 2,
+    "userId": 1781281386924,
+    "texto": ".",
+    "concluida": false,
+    "criadaEm": "12/06/2026"
+  }
+]

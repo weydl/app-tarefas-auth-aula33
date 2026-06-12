@@ -51,14 +51,12 @@ tarefaRoutes.post(
   "/tarefas/:id/concluir",
   requireAuth,
   async (req: Request, res: Response) => {
-    const id = Number(req.params.id);
-
     await TarefaModel.toggleConcluida(
       req.session.userId!,
-      id
+      Number(req.params.id)
     );
 
-    return res.redirect("/tarefas");
+    res.redirect("/tarefas");
   }
 );
 
