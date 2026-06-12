@@ -1,0 +1,11 @@
+<h1>Painel Admin</h1>
+
+<ul>
+  <% usuarios.forEach(usuario => { %>
+    <li>
+      <%= usuario.nome %> -
+      <%= usuario.email %> -
+      <%= usuario.role %>
+    </li>
+  <% }) %>
+</ul>
