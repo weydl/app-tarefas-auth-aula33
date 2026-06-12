@@ -3,12 +3,15 @@ import * as UserModel from "../models/userModel";
 
 export const authRoutes = Router();
 
-// GET /login
-authRoutes.get("/", (req: Request, res: Response) => {
+authRoutes.get("/login", (req: Request, res: Response) => {
   const flash = req.session.flash;
   req.session.flash = null;
 
   res.render("login", { flash });
+});
+
+authRoutes.get("/", (req: Request, res: Response) => {
+  res.redirect("/login");
 });
 
 // GET /registro

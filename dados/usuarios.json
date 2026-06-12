@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": 1781281183410,
+    "nome": "max",
+    "email": "antoniomax089@gmail.com",
+    "senha": "$2b$10$6gONJ1XnW1OKrKlzBn9UDO5/kG6Beenuvz91uVlYFFv8ejBMsx0em",
+    "role": "ADMIN"
+  },
+  {
+    "id": 1781281264712,
+    "nome": "max",
+    "email": "antoniomax0898@gmail.com",
+    "senha": "$2b$10$..UUUVA8aciyaZEO0pvL.ukJ2NjlDMXrQy9jPEKO15Td7oodzmrxG",
+    "role": "USER"
+  },
+  {
+    "id": 1781281386924,
+    "nome": "max",
+    "email": "antoniomax08988@gmail.com",
+    "senha": "$2b$10$sybRkc81WtGvomxhco2YCea6o/kwf1wkzP5NAUu8pIXpLLkKrqaEK",
+    "role": "USER"
+  }
+]
